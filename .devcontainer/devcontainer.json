@@ -1,0 +1,39 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "nodeGypDependencies": true,
+            "version": "latest"
+        },
+        "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {},
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "configureZshAsDefaultShell": true,
+            "installOhMyZsh": true,
+            "installOhMyZshConfig": true,
+            "upgradePackages": true,
+            "username": "automatic",
+            "userUid": "automatic",
+            "userGid": "automatic"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "styled-components.vscode-styled-components",
+                "amatiasq.sort-imports",
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint",
+                "dotenv.dotenv-vscode",
+                "medo64.render-crlf",
+                "formulahendry.auto-close-tag",
+                "formulahendry.auto-rename-tag",
+                "bierner.github-markdown-preview",
+                "bierner.markdown-checkbox",
+                "bierner.markdown-footnotes",
+                "bierner.markdown-emoji",
+                "bierner.markdown-preview-github-styles"
+            ]
+        }
+    }
+}

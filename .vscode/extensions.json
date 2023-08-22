@@ -1,0 +1,17 @@
+{
+    "recommendations": [
+        "styled-components.vscode-styled-components",
+        "amatiasq.sort-imports",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "dotenv.dotenv-vscode",
+        "medo64.render-crlf",
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+        "bierner.github-markdown-preview",
+        "bierner.markdown-checkbox",
+        "bierner.markdown-footnotes",
+        "bierner.markdown-emoji",
+        "bierner.markdown-preview-github-styles"
+    ]
+}

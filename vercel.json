@@ -1,0 +1,8 @@
+{
+    "version": 2,
+    "trailingSlash": true,
+    "public": true,
+    "github": {
+        "enabled": true
+    }
+}

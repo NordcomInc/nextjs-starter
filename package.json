@@ -1,0 +1,83 @@
+{
+    "name": "@nordcom/nextjs-starter",
+    "version": "0.0.1",
+    "description": "Starter template for Next.js 13 projects wanting to use the battle-tested pages router.",
+    "type": "module",
+    "cacheDirectories": [
+        ".next/cache"
+    ],
+    "prettier": "@nordcom/prettier",
+    "scripts": {
+        "start": "next start -p $PORT",
+        "dev": "next dev",
+        "build": "next build",
+        "postbuild": "npm run sitemap",
+        "sitemap": "next-sitemap",
+        "postsitemap": "for i in public/*.xml; do cat $i | pretty-xml | tee $i > /dev/null; done",
+        "lint": "npm-run-all --parallel lint:*",
+        "lint:next": "next lint",
+        "lint:prettier": "prettier src/**/*.* --check",
+        "lint:types": "tsc",
+        "test": "npm-run-all --parallel test:*",
+        "test:jest": "jest --coverage --passWithNoTests",
+    },
+    "author": {
+        "name": "Nordcom Group Inc.",
+        "email": "opensource@nordcom.io",
+        "url": "https://nordcom.io/"
+    },
+    "contributors": [
+        {
+            "name": "Filiph Siitam Sandström",
+            "email": "filiph@nordcom.io",
+            "url": "https://github.com/filiphsps/"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NordcomInc/nextjs-starter.git"
+    },
+    "keywords": [
+        "nextjs",
+        "nextjs-starter",
+        "template",
+        "react"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/NordcomInc/nextjs-starter/issues"
+    },
+    "homepage": "https://github.com/NordcomInc/nextjs-starter#readme",
+    "browserslist": [
+        ">0.3%",
+        "defaults",
+        "supports es6-module",
+        "supports css-grid"
+    ],
+    "devDependencies": {
+        "@nordcom/prettier": "0.1.1",
+        "@types/node": "20.5.2",
+        "@types/react": "18.2.20",
+        "eslint": "8.47.0",
+        "eslint-config-next": "13.4.19",
+        "eslint-config-prettier": "9.0.0",
+        "jest": "29.6.3",
+        "jest-environment-jsdom": "29.6.3",
+        "next-sitemap": "4.2.2",
+        "npm-run-all": "4.1.5",
+        "prettier": "3.0.2",
+        "pretty-xml": "1.2.1"
+    },
+    "dependencies": {
+        "@emotion/is-prop-valid": "1.2.1",
+        "destyle.css": "4.0.0",
+        "next": "13.4.19",
+        "next-seo": "6.1.0",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "sass": "1.66.1",
+        "sharp": "0.32.5",
+        "styled-components": "6.0.7",
+        "typescript": "5.1.6"
+    }
+}
