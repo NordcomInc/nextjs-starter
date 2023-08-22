@@ -1,0 +1,72 @@
+name: 🧠 CI
+
+on: [push, pull_request_target]
+
+jobs:
+    test:
+        name: 🔬 Test
+        runs-on: ubuntu-latest
+        timeout-minutes: 10
+        env:
+            CI: true
+        steps:
+            - name: 🕶️ Checkout repository
+              uses: actions/checkout@v3
+
+            - name: 🏎️ Setup nodejs
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 'lts/*'
+                  cache: 'npm'
+
+            - name: 💾 Cache node modules
+              uses: actions/cache@v3
+              with:
+                  path: ~/.npm
+                  key: ${{ runner.os }}-node-test-${{ hashFiles('**/package-lock.json') }}
+                  restore-keys: |
+                      ${{ runner.os }}-node-test-
+
+            - name: 📦 Download dependencies
+              run: npm ci
+
+            - name: 🧪 Test
+              run: npm run test
+
+            - name: 📋 Lint
+              run: npm run lint
+
+    build:
+        name: 🏗️ Build
+        needs: [test]
+        runs-on: ubuntu-latest
+        timeout-minutes: 10
+        env:
+            CI: true
+        steps:
+            - name: 🕶️ Checkout repository
+              uses: actions/checkout@v3
+
+            - name: 🏎️ Setup nodejs
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 'lts/*'
+                  cache: 'npm'
+
+            - name: 💾 Cache node modules
+              uses: actions/cache@v3
+              with:
+                  path: |
+                      ~/.npm
+                      ${{ github.workspace }}/.next/cache
+                  # Generate a new cache whenever packages or source files change.
+                  key: ${{ runner.os }}-node-build-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.[jt]s', '**/*.[jt]sx') }}
+                  # If source files changed but packages didn't, rebuild from a prior cache.
+                  restore-keys: |
+                      ${{ runner.os }}-node-build-${{ hashFiles('**/package-lock.json') }}-
+
+            - name: 📦 Download dependencies
+              run: npm ci
+
+            - name: 🛠️ Build
+              run: npm run build
