@@ -10,7 +10,7 @@ const config = {
     },
     images: {
         minimumCacheTTL: 60,
-        domains: ['ladybird.dev', '*.github.io'],
+        domains: ['*.github.io'],
         deviceSizes: [650, 900, 1280, 1920],
         imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
     },
