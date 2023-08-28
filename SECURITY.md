@@ -1,24 +1,24 @@
-# Security Policy
+## Security
 
-## Supported Versions
+Nordcom Group Inc. takes the security of our software very seriously. Although, due to our size and being such a new and novel company, we do not accept and cannot offer any form of liability (legal or otherwise) as per the included license unless otherwise expressly specified.
 
-We don't offer any support and take no form of liability in a legal sense, however
-you can reasonably view the `master` branch (provided it's been updated somewhat
-recently by something other than a bot like `@renvoate`) as the "supported" version.
+If you believe you have found a security flaw or vulnerability, please report it to us in the manner that is described below.
 
-## Reporting a Vulnerability
+## Reporting Security Concerns and Issues
 
-While this project is only meant to serve as a mere template/guidelines for how you
-can start a nextjs project based on how we do it; we still take all security issues
-and vulnerabilities extremely seriously. Please report any (suspected) security
-vulnerabilities and/or issues to **[opensource@nordcom.io](mailto:opensource@nordcom.io)**.
-After which you will hear from one of us as soon as humanly possible. Thank you.
+**Please, do not report or disclose a potential security vulnerability through a publicly accessible forum like GitHub issues.** 
+
+Instead, report any suspected security vulnerabilities and/or issues to **[opensource@nordcom.io](mailto:opensource@nordcom.io)**.
+
+After which, we may reach out and request more information to help us triage faster.
+
+You will then either hear from one of us as soon as a fix has been deployed, if possible, or in the form of a public disclosure with a workaround.
 
 ## Questions
 
-For any questions or need for clarification feel to reach out to us on
-[opensource@nordcom.io](mailto:opensource@nordcom.io) or [X (Twitter)](https://x.com/NordcomInc).
+For any questions or need for clarification, feel free to reach out to us on
+[opensource@nordcom.io](mailto:opensource@nordcom.io) or [X / (Twitter)](https://x.com/NordcomInc).
 
-```ts
-// the team @ nordcom
-```
+## Policy
+
+Nordcom Group Inc. tries to the best of its ability to follow Microsoft's principle of [Coordinated Vulnerability Disclosure](https://www.microsoft.com/en-us/msrc/cvd).
