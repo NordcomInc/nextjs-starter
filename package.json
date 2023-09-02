@@ -57,7 +57,7 @@
     ],
     "devDependencies": {
         "@nordcom/prettier": "0.1.1",
-        "@types/node": "20.5.8",
+        "@types/node": "20.5.9",
         "@types/react": "18.2.21",
         "eslint": "8.48.0",
         "eslint-config-next": "13.4.19",
